@@ -1,0 +1,6 @@
+en:
+  label_export_issues: "Export Issues"
+  button_export_to_excel: "Export to Excel"
+  label_start_date: "Start Date"
+  label_end_date: "End Date"
+  label_status: "Status"

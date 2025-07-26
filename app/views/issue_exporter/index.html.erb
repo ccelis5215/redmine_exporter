@@ -1,0 +1,19 @@
+<h2><%= l(:label_export_issues) %></h2>
+<%= form_tag(export_issues_project_path(@project), method: :post) do %>
+  <div class="box">
+    <p>
+      <%= label_tag 'start_date', l(:label_start_date) %>
+      <%= date_field_tag 'start_date', @start_date %>
+    </p>
+    <p>
+      <%= label_tag 'end_date', l(:label_end_date) %>
+      <%= date_field_tag 'end_date', @end_date %>
+    </p>
+    <p>
+      <%= label_tag 'status_id', l(:label_status) %>
+      <%= select_tag 'status_id', 
+          options_for_select([['All', '']] + @statuses.map { |s| [s.name, s.id] }, @status_id) %>
+    </p>
+  </div>
+  <%= submit_tag l(:button_export_to_excel), class: 'button' %>
+<% end %>

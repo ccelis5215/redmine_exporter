@@ -1,0 +1,10 @@
+.icon-export {
+  background-image: url(../images/export.png);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  background-position: 0 50%;
+}
+
+.contextual {
+  margin-bottom: 15px;
+}

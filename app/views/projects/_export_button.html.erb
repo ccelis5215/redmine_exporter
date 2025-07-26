@@ -1,0 +1,7 @@
+<% if @project.id == 146 && User.current.allowed_to?(:export_issues, @project) %>
+  <li>
+    <%= link_to l(:label_export_issues),
+          { controller: 'issue_exporter', action: 'index', project_id: @project },
+          class: 'icon icon-export' %>
+  </li>
+<% end %>
